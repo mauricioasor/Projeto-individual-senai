@@ -1,0 +1,48 @@
+/* ======================================================
+   tokens.css — Design tokens (variáveis globais)
+   Alterar cor, raio ou espaçamento? Só aqui.
+   ====================================================== */
+
+:root {
+  /* Bootstrap overrides */
+  --bs-primary: #4F46E5;
+  --bs-primary-rgb: 79, 70, 229;
+  --bs-link-color: #4F46E5;
+  --bs-link-hover-color: #4338CA;
+  --bs-body-bg: #F8FAFC;
+  --bs-body-color: #0F172A;
+  --bs-body-font-family: 'Inter', system-ui, sans-serif;
+  --bs-border-color: #E2E8F0;
+
+  /* Marca */
+  --primary-dark: #4338CA;
+  --primary-light: #EEF2FF;
+
+  /* Texto */
+  --text-muted: #475569;
+  --text-subtle: #94A3B8;
+
+  /* Bordas */
+  --border: #E2E8F0;
+  --border-light: #F1F5F9;
+
+  /* Estados */
+  --success: #059669;
+  --success-bg: #D1FAE5;
+  --warning: #D97706;
+  --warning-bg: #FEF3C7;
+  --danger: #DC2626;
+  --danger-bg: #FEE2E2;
+  --info: #0284C7;
+  --info-bg: #E0F2FE;
+
+  /* Sidebar (tema escuro) */
+  --sidebar-bg: #0F172A;
+  --sidebar-surface: #1E293B;
+  --sidebar-text: #94A3B8;
+  --sidebar-text-active: #FFFFFF;
+
+  /* Dimensões */
+  --sidebar-w: 264px;
+  --sidebar-w-collapsed: 80px;
+}

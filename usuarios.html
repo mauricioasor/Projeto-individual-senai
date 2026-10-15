@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MR Biblioteca — Usuários</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+<div data-sidebar="users"></div>
+
+<main class="main">
+  <div data-topbar></div>
+
+  <div class="page">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Usuários</h1>
+        <p class="page-subtitle">89 cadastrados &middot; 84 ativos &middot; 5 suspensões</p>
+      </div>
+      <div class="page-actions">
+        <button class="btn-mr primary"><i class="bi bi-person-plus"></i> Novo usuário</button>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="kpi-icon success"><i class="bi bi-person-check"></i></div><div class="kpi-label">Ativos</div><div class="kpi-value">84</div><span class="kpi-delta"><i class="bi bi-arrow-up"></i>+6 este mês</span></div>
+      <div class="kpi"><div class="kpi-icon warning"><i class="bi bi-person-dash"></i></div><div class="kpi-label">Suspensos</div><div class="kpi-value">5</div><span class="kpi-delta warn"><i class="bi bi-clock"></i>Aguardando ação</span></div>
+      <div class="kpi"><div class="kpi-icon info"><i class="bi bi-mortarboard"></i></div><div class="kpi-label">Alunos</div><div class="kpi-value">68</div><span class="kpi-delta"><i class="bi bi-arrow-up"></i>76% do total</span></div>
+      <div class="kpi"><div class="kpi-icon"><i class="bi bi-person-workspace"></i></div><div class="kpi-label">Professores</div><div class="kpi-value">21</div><span class="kpi-delta"><i class="bi bi-arrow-up"></i>+1 esta semana</span></div>
+    </div>
+
+    <div class="filter-row">
+      <div class="search"><i class="bi bi-search"></i><input placeholder="Buscar por nome, e-mail ou matrícula..."></div>
+      <button class="filter-btn active"><i class="bi bi-people"></i> Todos</button>
+      <button class="filter-btn"><i class="bi bi-mortarboard"></i> Alunos</button>
+      <button class="filter-btn"><i class="bi bi-person-workspace"></i> Professores</button>
+      <button class="filter-btn"><i class="bi bi-shield"></i> Administradores</button>
+      <div style="margin-left:auto;display:flex;gap:6px;background:#fff;border:1px solid var(--border);border-radius:10px;padding:4px;">
+        <button class="filter-btn" style="border:none;background:transparent;height:34px;padding:0 12px;"><i class="bi bi-list"></i></button>
+        <button class="filter-btn active" style="border:none;background:var(--primary-light);height:34px;padding:0 12px;"><i class="bi bi-grid-3x3-gap"></i></button>
+      </div>
+    </div>
+
+    <div class="users-grid">
+      <div class="user-card-grid">
+        <div class="user-card-avatar">CS</div>
+        <h3 class="user-card-name">Cristopher Silva</h3>
+        <p class="user-card-email">cris.silva@mr.com.br</p>
+        <span class="badge-mr primary">Aluno &middot; DS-2024</span>
+        <div class="user-card-stats">
+          <div><div class="user-stat-num">12</div><div class="user-stat-label">Empréstimos</div></div>
+          <div><div class="user-stat-num">2</div><div class="user-stat-label">Ativos</div></div>
+          <div><div class="user-stat-num">0</div><div class="user-stat-label">Atrasos</div></div>
+        </div>
+      </div>
+      <div class="user-card-grid">
+        <div class="user-card-avatar">GZ</div>
+        <h3 class="user-card-name">Gustavo Zella</h3>
+        <p class="user-card-email">gustavo.zella@mr.com.br</p>
+        <span class="badge-mr primary">Aluno &middot; DS-2024</span>
+        <div class="user-card-stats">
+          <div><div class="user-stat-num">8</div><div class="user-stat-label">Empréstimos</div></div>
+          <div><div class="user-stat-num">1</div><div class="user-stat-label">Ativos</div></div>
+          <div><div class="user-stat-num">0</div><div class="user-stat-label">Atrasos</div></div>
+        </div>
+      </div>
+      <div class="user-card-grid" style="border-color:var(--danger);">
+        <div class="user-card-avatar" style="background:var(--danger-bg);color:var(--danger);">VB</div>
+        <h3 class="user-card-name">Vinicius Baggio</h3>
+        <p class="user-card-email">vini.baggio@mr.com.br</p>
+        <span class="badge-mr danger"><i class="bi bi-exclamation-triangle-fill"></i> Suspenso &middot; 6 dias</span>
+        <div class="user-card-stats">
+          <div><div class="user-stat-num">15</div><div class="user-stat-label">Empréstimos</div></div>
+          <div><div class="user-stat-num" style="color:var(--danger);">1</div><div class="user-stat-label">Ativos</div></div>
+          <div><div class="user-stat-num" style="color:var(--danger);">1</div><div class="user-stat-label">Atrasos</div></div>
+        </div>
+      </div>
+      <div class="user-card-grid">
+        <div class="user-card-avatar">EJ</div>
+        <h3 class="user-card-name">Enzo Junior</h3>
+        <p class="user-card-email">enzo.jr@mr.com.br</p>
+        <span class="badge-mr primary">Aluno &middot; DS-2025</span>
+        <div class="user-card-stats">
+          <div><div class="user-stat-num">9</div><div class="user-stat-label">Empréstimos</div></div>
+          <div><div class="user-stat-num">1</div><div class="user-stat-label">Ativos</div></div>
+          <div><div class="user-stat-num" style="color:var(--danger);">1</div><div class="user-stat-label">Atrasos</div></div>
+        </div>
+      </div>
+      <div class="user-card-grid">
+        <div class="user-card-avatar" style="background:var(--success-bg);color:var(--success);">AC</div>
+        <h3 class="user-card-name">Ana Carolina</h3>
+        <p class="user-card-email">ana.carolina@mr.com.br</p>
+        <span class="badge-mr success"><i class="bi bi-shield-check"></i> Professora &middot; TI</span>
+        <div class="user-card-stats">
+          <div><div class="user-stat-num">24</div><div class="user-stat-label">Empréstimos</div></div>
+          <div><div class="user-stat-num">3</div><div class="user-stat-label">Ativos</div></div>
+          <div><div class="user-stat-num">0</div><div class="user-stat-label">Atrasos</div></div>
+        </div>
+      </div>
+      <div class="user-card-grid">
+        <div class="user-card-avatar">GE</div>
+        <h3 class="user-card-name">Gustavo Esteves</h3>
+        <p class="user-card-email">gus.es@mr.com.br</p>
+        <span class="badge-mr danger"><i class="bi bi-exclamation-triangle-fill"></i> Suspenso &middot; 6 dias</span>
+        <div class="user-card-stats">
+          <div><div class="user-stat-num">11</div><div class="user-stat-label">Empréstimos</div></div>
+          <div><div class="user-stat-num" style="color:var(--danger);">1</div><div class="user-stat-label">Ativos</div></div>
+          <div><div class="user-stat-num" style="color:var(--danger);">1</div><div class="user-stat-label">Atrasos</div></div>
+        </div>
+      </div>
+      <div class="user-card-grid">
+        <div class="user-card-avatar" style="background:var(--info-bg);color:var(--info);">LC</div>
+        <h3 class="user-card-name">Lia Cardoso</h3>
+        <p class="user-card-email">lia.c@mr.com.br</p>
+        <span class="badge-mr info"><i class="bi bi-shield-check"></i> Professora &middot; História</span>
+        <div class="user-card-stats">
+          <div><div class="user-stat-num">19</div><div class="user-stat-label">Empréstimos</div></div>
+          <div><div class="user-stat-num">2</div><div class="user-stat-label">Ativos</div></div>
+          <div><div class="user-stat-num">0</div><div class="user-stat-label">Atrasos</div></div>
+        </div>
+      </div>
+      <div class="user-card-grid">
+        <div class="user-card-avatar" style="background:#FEE2E2;color:#DC2626;">M</div>
+        <h3 class="user-card-name">Mauricio</h3>
+        <p class="user-card-email">mauricio@mr.com.br</p>
+        <span class="badge-mr danger"><i class="bi bi-shield-fill"></i> Admin geral</span>
+        <div class="user-card-stats">
+          <div><div class="user-stat-num">&mdash;</div><div class="user-stat-label">Empréstimos</div></div>
+          <div><div class="user-stat-num">&mdash;</div><div class="user-stat-label">Ativos</div></div>
+          <div><div class="user-stat-num">&mdash;</div><div class="user-stat-label">Atrasos</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;display:flex;justify-content:center;">
+      <div class="pagination-buttons">
+        <button disabled><i class="bi bi-chevron-left"></i></button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>&hellip;</button>
+        <button>12</button>
+        <button><i class="bi bi-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/sidebar.js"></script>
+<script src="assets/js/topbar.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

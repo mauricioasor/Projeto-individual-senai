@@ -1,0 +1,55 @@
+/* ======================================================
+   base.css — Reset, body, overrides do Bootstrap, utils
+   ====================================================== */
+
+* { box-sizing: border-box; }
+
+html, body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+a { color: var(--bs-primary); }
+
+/* Bootstrap overrides */
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--primary-dark);
+  --bs-btn-hover-border-color: var(--primary-dark);
+  --bs-btn-active-bg: var(--primary-dark);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 .2rem rgba(79, 70, 229, .18);
+}
+
+.form-check-input:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+/* Util classes */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 24px 0;
+}
+
+.alert-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: var(--danger-bg);
+  color: var(--danger);
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #FECACA;
+}
+.alert-bar.warn  { background: var(--warning-bg); color: var(--warning); border-color: #FDE68A; }
+.alert-bar.info  { background: var(--info-bg);    color: var(--info);    border-color: #BAE6FD; }
