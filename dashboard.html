@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MR Biblioteca — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+<div data-sidebar="dashboard"></div>
+
+<main class="main">
+  <div data-topbar></div>
+
+  <div class="page">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Olá, Mauricio</h1>
+        <p class="page-subtitle">Aqui está o resumo da biblioteca para terça-feira, 5 de Maio de 2026.</p>
+      </div>
+      <div class="page-actions">
+        <a href="emprestimos.html" class="btn-mr primary"><i class="bi bi-plus-lg"></i> Novo empréstimo</a>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-icon"><i class="bi bi-book"></i></div>
+        <div class="kpi-label">Total de livros</div>
+        <div class="kpi-value">127</div>
+        <span class="kpi-delta"><i class="bi bi-arrow-up"></i>+3 este mês</span>
+      </div>
+      <div class="kpi">
+        <div class="kpi-icon info"><i class="bi bi-people"></i></div>
+        <div class="kpi-label">Usuários ativos</div>
+        <div class="kpi-value">84</div>
+        <span class="kpi-delta neg"><i class="bi bi-exclamation-triangle"></i>5 suspensões</span>
+      </div>
+      <div class="kpi">
+        <div class="kpi-icon warning"><i class="bi bi-arrow-left-right"></i></div>
+        <div class="kpi-label">Empréstimos ativos</div>
+        <div class="kpi-value">45</div>
+        <span class="kpi-delta neg"><i class="bi bi-clock-history"></i>12 atrasados</span>
+      </div>
+      <div class="kpi">
+        <div class="kpi-icon success"><i class="bi bi-graph-up-arrow"></i></div>
+        <div class="kpi-label">Disponibilidade</div>
+        <div class="kpi-value">82%</div>
+        <span class="kpi-delta"><i class="bi bi-arrow-up"></i>+2% esta semana</span>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <!-- Empréstimos recentes -->
+      <div class="card-mr">
+        <div class="card-mr-header">
+          <div>
+            <h3 class="card-mr-title">Empréstimos recentes</h3>
+            <p class="card-mr-subtitle">Últimos 7 dias</p>
+          </div>
+          <a href="emprestimos.html" class="card-mr-link">Ver todos &rarr;</a>
+        </div>
+        <div>
+          <div class="list-item">
+            <div class="list-avatar">CS</div>
+            <div class="list-content">
+              <p class="list-title">Cristopher Silva</p>
+              <p class="list-subtitle">Procrastinando com eficiência</p>
+            </div>
+            <div class="list-meta">
+              <span class="badge-mr success"><i class="bi bi-check-circle-fill"></i>Ativo</span>
+              <small style="font-size:11px;color:var(--text-subtle);">há 2 dias</small>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-avatar">GZ</div>
+            <div class="list-content">
+              <p class="list-title">Gustavo Zella</p>
+              <p class="list-subtitle">Seja Dev sem saber programar</p>
+            </div>
+            <div class="list-meta">
+              <span class="badge-mr success"><i class="bi bi-check-circle-fill"></i>Ativo</span>
+              <small style="font-size:11px;color:var(--text-subtle);">há 3 dias</small>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-avatar">EJ</div>
+            <div class="list-content">
+              <p class="list-title">Enzo Junior</p>
+              <p class="list-subtitle">Como farmar aura em 2026</p>
+            </div>
+            <div class="list-meta">
+              <span class="badge-mr danger"><i class="bi bi-exclamation-circle-fill"></i>Atrasado</span>
+              <small style="font-size:11px;color:var(--text-subtle);">há 5 dias</small>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-avatar">AC</div>
+            <div class="list-content">
+              <p class="list-title">Ana Carolina</p>
+              <p class="list-subtitle">Formação falta zero</p>
+            </div>
+            <div class="list-meta">
+              <span class="badge-mr info"><i class="bi bi-check-circle-fill"></i>Devolvido</span>
+              <small style="font-size:11px;color:var(--text-subtle);">hoje</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mais emprestados -->
+      <div class="card-mr">
+        <div class="card-mr-header">
+          <div>
+            <h3 class="card-mr-title">Mais emprestados</h3>
+            <p class="card-mr-subtitle">Top 4 do mês</p>
+          </div>
+          <a href="catalogo.html" class="card-mr-link">Ver acervo &rarr;</a>
+        </div>
+        <div>
+          <div class="list-item">
+            <div class="rank-pill gold">01</div>
+            <div class="list-content">
+              <p class="list-title">Procrastinando com eficiência</p>
+              <p class="list-subtitle">Carlos M. Andrade</p>
+            </div>
+            <div class="list-meta">
+              <small style="font-size:12px;font-weight:600;">32 empréstimos</small>
+              <small style="font-size:11px;color:var(--text-muted);">2/4 disponíveis</small>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="rank-pill">02</div>
+            <div class="list-content">
+              <p class="list-title">Seja Dev sem saber programar</p>
+              <p class="list-subtitle">Júlia Reis</p>
+            </div>
+            <div class="list-meta">
+              <small style="font-size:12px;font-weight:600;">28 empréstimos</small>
+              <small style="font-size:11px;color:var(--text-muted);">2/4 disponíveis</small>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="rank-pill">03</div>
+            <div class="list-content">
+              <p class="list-title">Como farmar aura em 2026</p>
+              <p class="list-subtitle">Enzo Júnior</p>
+            </div>
+            <div class="list-meta">
+              <small style="font-size:12px;font-weight:600;">24 empréstimos</small>
+              <small style="font-size:11px;color:var(--text-muted);">3/3 disponíveis</small>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="rank-pill">04</div>
+            <div class="list-content">
+              <p class="list-title">Formação falta zero</p>
+              <p class="list-subtitle">Lia Cardoso</p>
+            </div>
+            <div class="list-meta">
+              <small style="font-size:12px;font-weight:600;">18 empréstimos</small>
+              <small style="font-size:11px;color:var(--danger);">1/5 disponíveis</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Atrasados -->
+    <div class="card-mr">
+      <div class="card-mr-header">
+        <div class="card-mr-title-wrap">
+          <div class="kpi-icon danger" style="margin:0;"><i class="bi bi-exclamation-triangle"></i></div>
+          <div>
+            <h3 class="card-mr-title">Empréstimos atrasados</h3>
+            <p class="card-mr-subtitle">Requerem ação imediata</p>
+          </div>
+        </div>
+        <span class="badge-mr danger" style="padding:6px 14px;font-size:12px;">
+          <i class="bi bi-exclamation-triangle-fill"></i>12 atrasados
+        </span>
+      </div>
+      <div class="table-wrap">
+        <table class="table-mr">
+          <thead>
+            <tr><th>Usuário</th><th>Livro</th><th>Vencimento</th><th>Atraso</th><th>Prioridade</th><th style="text-align:right;">Ação</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="cell-user"><div class="list-avatar">VB</div><div class="cell-stack"><b>Vinicius Baggio</b><small>ID #4827</small></div></div></td>
+              <td><div class="cell-book"><div class="book-cover help">F</div><div class="cell-stack"><b>Formação falta Zero</b><small>ISBN 978-85-02-00054-9</small></div></div></td>
+              <td>29/04/2026</td>
+              <td><span class="badge-mr danger">6 dias</span></td>
+              <td><span class="badge-mr warning">Alta</span></td>
+              <td style="text-align:right;">
+                <button class="btn-sm-action primary"><i class="bi bi-bell"></i>Notificar</button>
+                <button class="btn-sm-action outline"><i class="bi bi-three-dots"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="cell-user"><div class="list-avatar">GE</div><div class="cell-stack"><b>Gustavo Esteves</b><small>ID #4831</small></div></div></td>
+              <td><div class="cell-book"><div class="book-cover help">N</div><div class="cell-stack"><b>Não foi só pelo diploma</b><small>ISBN 978-85-02-00098-3</small></div></div></td>
+              <td>29/04/2026</td>
+              <td><span class="badge-mr danger">6 dias</span></td>
+              <td><span class="badge-mr warning">Alta</span></td>
+              <td style="text-align:right;">
+                <button class="btn-sm-action primary"><i class="bi bi-bell"></i>Notificar</button>
+                <button class="btn-sm-action outline"><i class="bi bi-three-dots"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="cell-user"><div class="list-avatar">EJ</div><div class="cell-stack"><b>Enzo Junior</b><small>ID #4855</small></div></div></td>
+              <td><div class="cell-book"><div class="book-cover fantasy">C</div><div class="cell-stack"><b>Como farmar aura em 2026</b><small>ISBN 978-85-02-00121-4</small></div></div></td>
+              <td>30/04/2026</td>
+              <td><span class="badge-mr danger">5 dias</span></td>
+              <td><span class="badge-mr warning">Média</span></td>
+              <td style="text-align:right;">
+                <button class="btn-sm-action primary"><i class="bi bi-bell"></i>Notificar</button>
+                <button class="btn-sm-action outline"><i class="bi bi-three-dots"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination-mr">
+        <span class="pagination-info">Mostrando 3 de 12 atrasados</span>
+        <a href="emprestimos.html" class="btn-mr ghost">Ver todos os atrasados &rarr;</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/sidebar.js"></script>
+<script src="assets/js/topbar.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

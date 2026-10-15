@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MR Biblioteca — Catálogo de Livros</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+<div data-sidebar="catalog"></div>
+
+<main class="main">
+  <div data-topbar></div>
+
+  <div class="page">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Catálogo de Livros</h1>
+        <p class="page-subtitle">127 títulos cadastrados &middot; 412 exemplares no acervo</p>
+      </div>
+      <div class="page-actions">
+        <button class="btn-mr primary"><i class="bi bi-plus-lg"></i> Novo livro</button>
+      </div>
+    </div>
+
+    <div class="filter-row">
+      <div class="search">
+        <i class="bi bi-search"></i>
+        <input placeholder="Busca por título, autor ou ISBN...">
+      </div>
+      <button class="filter-btn"><i class="bi bi-tag"></i> Categoria <i class="bi bi-chevron-down" style="font-size:11px;opacity:.5;"></i></button>
+      <button class="filter-btn"><i class="bi bi-circle-fill" style="font-size:8px;"></i> Status <i class="bi bi-chevron-down" style="font-size:11px;opacity:.5;"></i></button>
+      <button class="filter-btn"><i class="bi bi-calendar"></i> Ano <i class="bi bi-chevron-down" style="font-size:11px;opacity:.5;"></i></button>
+      <button class="filter-btn"><i class="bi bi-arrow-down-up"></i> Mais emprestados</button>
+      <div style="margin-left:auto;display:flex;gap:6px;background:#fff;border:1px solid var(--border);border-radius:10px;padding:4px;">
+        <button class="filter-btn active" style="border:none;background:var(--primary-light);height:34px;padding:0 12px;"><i class="bi bi-list"></i></button>
+        <button class="filter-btn" style="border:none;background:transparent;height:34px;padding:0 12px;"><i class="bi bi-grid-3x3-gap"></i></button>
+      </div>
+    </div>
+
+    <div class="card-mr">
+      <div class="table-wrap">
+        <table class="table-mr">
+          <thead>
+            <tr><th>Livro</th><th>Autor</th><th>ISBN</th><th>Categoria</th><th>Ano</th><th>Exemplares</th><th>Status</th><th style="text-align:right;">Ações</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="cell-book"><div class="book-cover help">P</div><div class="cell-stack"><b>Procrastinando com eficiência</b><small>Edição revisada</small></div></div></td>
+              <td>Carlos M. Andrade</td>
+              <td><code style="font-size:11px;color:var(--text-muted);">978-85-02-00054-9</code></td>
+              <td><span class="badge-mr neutral">AutoAjuda</span></td>
+              <td>2024</td>
+              <td><b>3</b>/3</td>
+              <td><span class="badge-mr success"><i class="bi bi-check-circle-fill"></i>Disponível</span></td>
+              <td style="text-align:right;">
+                <button class="btn-sm-action outline"><i class="bi bi-eye"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-pencil"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-three-dots"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="cell-book"><div class="book-cover tech">S</div><div class="cell-stack"><b>Seja Dev sem saber programar</b><small>2ª edição</small></div></div></td>
+              <td>Júlia Reis</td>
+              <td><code style="font-size:11px;color:var(--text-muted);">978-85-02-00077-8</code></td>
+              <td><span class="badge-mr neutral">Tecnologia</span></td>
+              <td>2025</td>
+              <td><b>4</b>/12</td>
+              <td><span class="badge-mr success"><i class="bi bi-check-circle-fill"></i>Disponível</span></td>
+              <td style="text-align:right;">
+                <button class="btn-sm-action outline"><i class="bi bi-eye"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-pencil"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-three-dots"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="cell-book"><div class="book-cover dirty">C</div><div class="cell-stack"><b>Código sujo</b><small>Versão expandida</small></div></div></td>
+              <td>Robert C. Mortinho</td>
+              <td><code style="font-size:11px;color:var(--text-muted);">978-85-02-00088-4</code></td>
+              <td><span class="badge-mr neutral">Tecnologia</span></td>
+              <td>2022</td>
+              <td><b>1</b>/5</td>
+              <td><span class="badge-mr warning"><i class="bi bi-exclamation-circle-fill"></i>Quase esgotado</span></td>
+              <td style="text-align:right;">
+                <button class="btn-sm-action outline"><i class="bi bi-eye"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-pencil"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-three-dots"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="cell-book"><div class="book-cover fantasy">C</div><div class="cell-stack"><b>Como farmar aura em 2026</b><small>1ª edição</small></div></div></td>
+              <td>Enzo Júnior</td>
+              <td><code style="font-size:11px;color:var(--text-muted);">978-85-02-00121-4</code></td>
+              <td><span class="badge-mr neutral">Fantasia</span></td>
+              <td>2026</td>
+              <td><b>3</b>/3</td>
+              <td><span class="badge-mr success"><i class="bi bi-check-circle-fill"></i>Disponível</span></td>
+              <td style="text-align:right;">
+                <button class="btn-sm-action outline"><i class="bi bi-eye"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-pencil"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-three-dots"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="cell-book"><div class="book-cover history">N</div><div class="cell-stack"><b>Não foi só pelo diploma</b><small>Edição comemorativa</small></div></div></td>
+              <td>Lia Cardoso</td>
+              <td><code style="font-size:11px;color:var(--text-muted);">978-85-02-00098-3</code></td>
+              <td><span class="badge-mr neutral">História</span></td>
+              <td>2023</td>
+              <td><b>0</b>/9</td>
+              <td><span class="badge-mr danger"><i class="bi bi-x-circle-fill"></i>Indisponível</span></td>
+              <td style="text-align:right;">
+                <button class="btn-sm-action outline"><i class="bi bi-eye"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-pencil"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-three-dots"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="cell-book"><div class="book-cover help">F</div><div class="cell-stack"><b>Formação falta zero</b><small>3ª edição</small></div></div></td>
+              <td>Vinicius Baggio</td>
+              <td><code style="font-size:11px;color:var(--text-muted);">978-85-02-00141-2</code></td>
+              <td><span class="badge-mr neutral">AutoAjuda</span></td>
+              <td>2024</td>
+              <td><b>2</b>/9</td>
+              <td><span class="badge-mr success"><i class="bi bi-check-circle-fill"></i>Disponível</span></td>
+              <td style="text-align:right;">
+                <button class="btn-sm-action outline"><i class="bi bi-eye"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-pencil"></i></button>
+                <button class="btn-sm-action outline"><i class="bi bi-three-dots"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination-mr">
+        <span class="pagination-info">Exibindo <b>1&ndash;6</b> de <b>127</b> títulos</span>
+        <div class="pagination-buttons">
+          <button disabled><i class="bi bi-chevron-left"></i></button>
+          <button class="active">1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>&hellip;</button>
+          <button>22</button>
+          <button><i class="bi bi-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/sidebar.js"></script>
+<script src="assets/js/topbar.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
