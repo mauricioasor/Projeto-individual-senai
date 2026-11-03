@@ -115,6 +115,18 @@ class RelatorioController extends Controller
         return Carbon::parse($linha->data_prevista_dev)->startOfDay()->lt(today()) ? 'Atrasado' : 'Ativo';
     }
 
+    /** Dias de atraso: gravados na devolução ou, para livros ainda em posse, calculados até hoje. */
+    public static function diasAtraso(object $linha): int
+    {
+        if ($linha->data_devolucao !== null) {
+            return (int) $linha->dias_atraso;
+        }
+
+        $prevista = Carbon::parse($linha->data_prevista_dev)->startOfDay();
+
+        return $prevista->lt(today()) ? (int) $prevista->diffInDays(today()) : 0;
+    }
+
     /** CSV separado por ponto e vírgula, com BOM, para abrir corretamente no Excel (R.N.F. 15). */
     private function csv(Builder $consulta, string $arquivo): StreamedResponse
     {
@@ -133,7 +145,7 @@ class RelatorioController extends Controller
                     Carbon::parse($l->data_emprestimo)->format('d/m/Y'),
                     Carbon::parse($l->data_prevista_dev)->format('d/m/Y'),
                     $l->data_devolucao ? Carbon::parse($l->data_devolucao)->format('d/m/Y') : '',
-                    $l->dias_atraso,
+                    self::diasAtraso($l),
                     number_format((float) $l->valor_contribuicao_item, 2, ',', '.'),
                     self::situacao($l),
                 ], ';', '"', '\\');

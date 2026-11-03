@@ -1,0 +1,11 @@
+﻿Código;Colaborador;Livro;Categoria;"Data do empréstimo";"Devolução prevista";"Data de devolução";"Dias de atraso";"Contribuição (R$)";Situação
+#0003;"Ana Carolina";"Formação falta zero";Autoajuda;09/10/2026;23/10/2026;30/10/2026;7;7,00;Devolvido
+#0005;"Vinicius Baggio";"Não foi só pelo diploma";História;14/10/2026;28/10/2026;;6;0,00;Atrasado
+#0006;"Gustavo Esteves";"Não foi só pelo diploma";História;16/10/2026;30/10/2026;;4;0,00;Atrasado
+#0006;"Gustavo Esteves";"Arquitetura limpa para iniciantes";Tecnologia;16/10/2026;30/10/2026;;4;0,00;Atrasado
+#0007;"Lia Cardoso";"Liderança servidora";Gestão;17/10/2026;31/10/2026;03/11/2026;3;3,00;Devolvido
+#0004;"Enzo Junior";"Gestão ágil na prática";Gestão;22/10/2026;05/11/2026;01/11/2026;0;0,00;Devolvido
+#0002;"Gustavo Zella";"Código sujo";Tecnologia;29/10/2026;12/11/2026;;0;0,00;Ativo
+#0001;"Cristopher Silva";"Procrastinando com eficiência";Autoajuda;31/10/2026;14/11/2026;;0;0,00;Ativo
+#0001;"Cristopher Silva";"Seja Dev sem saber programar";Tecnologia;31/10/2026;14/11/2026;;0;0,00;Ativo
+#0008;"Cristopher Silva";"Arquitetura limpa para iniciantes";Tecnologia;03/11/2026;17/11/2026;;0;0,00;Ativo

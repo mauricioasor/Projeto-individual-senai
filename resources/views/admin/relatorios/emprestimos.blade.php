@@ -65,7 +65,7 @@
           <td>{{ \Illuminate\Support\Carbon::parse($l->data_emprestimo)->format('d/m/Y') }}</td>
           <td>{{ \Illuminate\Support\Carbon::parse($l->data_prevista_dev)->format('d/m/Y') }}</td>
           <td>{{ $l->data_devolucao ? \Illuminate\Support\Carbon::parse($l->data_devolucao)->format('d/m/Y') : '—' }}</td>
-          <td>{{ $l->dias_atraso }}</td>
+          <td>{{ RelatorioController::diasAtraso($l) }}</td>
           <td>R$ {{ number_format((float) $l->valor_contribuicao_item, 2, ',', '.') }}</td>
           <td><span class="badge-mr {{ ['Devolvido' => 'info', 'Atrasado' => 'danger', 'Ativo' => 'success'][$situacao] }}">{{ $situacao }}</span></td>
         </tr>

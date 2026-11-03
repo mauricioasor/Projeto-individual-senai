@@ -1,0 +1,63 @@
+Autenticacao (Tests\Feature\Autenticacao)
+ [x] Login com sucesso direciona para o painel do perfil
+ [x] Senha incorreta exibe mensagem generica
+ [x] Cinco tentativas invalidas bloqueiam a conta por 15 minutos
+ [x] Usuario inativo nao entra
+ [x] Paginas internas exigem login
+ [x] Senha e armazenada como hash
+
+Cadastro (Tests\Feature\Cadastro)
+ [x] Colaborador cria conta com email corporativo e perfil usuario
+ [x] Email fora do dominio e recusado
+ [x] Email repetido e recusado
+
+Devolucao (Tests\Feature\Devolucao)
+ [x] Devolucao com tres dias de atraso gera contribuicao de tres reais
+ [x] Devolucao parcial
+ [x] Pagamento da contribuicao libera novos emprestimos
+ [x] Notificacao de atraso envia email
+
+Emprestimo (Tests\Feature\Emprestimo)
+ [x] Colaborador registra emprestimo com dois livros
+ [x] Colaborador nao registra emprestimo para outra pessoa
+ [x] Admin registra emprestimo para colaborador
+ [x] Livro sem exemplar disponivel nao e emprestado
+ [x] Limite de tres livros em posse
+ [x] Mesmo livro nao pode se repetir no emprestimo
+ [x] Colaborador com atraso nao faz novo emprestimo
+ [x] Renovacao unica por mais 14 dias
+ [x] Colaborador nao renova emprestimo de outra pessoa
+
+Livro (Tests\Feature\Livro)
+ [x] Admin cadastra livro com varios autores
+ [x] Isbn repetido e recusado
+ [x] Livro exige pelo menos um autor
+ [x] Reduzir total abaixo dos emprestados e recusado
+ [x] Autor vinculado a livro nao pode ser excluido
+ [x] Catalogo filtra por titulo e disponibilidade
+
+Livro (Tests\Unit\Livro)
+ [x] Situacao conforme exemplares disponiveis
+ [x] Isbn 13 formatado
+
+Recuperacao Senha (Tests\Feature\RecuperacaoSenha)
+ [x] Fluxo completo de redefinicao
+ [x] Link nao pode ser usado duas vezes
+ [x] Link expira em 30 minutos
+ [x] Email inexistente recebe a mesma mensagem
+
+Relatorio (Tests\Feature\Relatorio)
+ [x] Painel do administrador exibe indicadores
+ [x] Relatorio lista emprestimos do periodo
+ [x] Exportacao csv com acentuacao
+ [x] Relatorio calcula dias de atraso dos livros em posse
+ [x] Exportacao pdf
+
+Seguranca (Tests\Feature\Seguranca)
+ [x] Colaborador nao acessa rotas do administrador
+ [x] Busca com injecao de sql e tratada como texto
+ [x] Conteudo html e escapado nas telas
+ [x] Formulario sem token csrf e recusado
+ [x] Requisicao de outro site sem token e recusada
+ [x] Usuario inativado e desconectado
+

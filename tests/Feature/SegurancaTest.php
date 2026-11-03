@@ -65,6 +65,23 @@ class SegurancaTest extends TestCase
         $this->assertDatabaseMissing('AUTOR', ['nome_autor' => 'Sem token']);
     }
 
+    /** CT13 – formulário enviado por outro site (ataque CSRF) */
+    public function test_requisicao_de_outro_site_sem_token_e_recusada(): void
+    {
+        $this->app['env'] = 'production';
+
+        $this->withHeaders(['Sec-Fetch-Site' => 'cross-site', 'Origin' => 'http://site-malicioso.test'])
+            ->post(route('cadastro.store'), [
+                'nome' => 'Conta Forjada',
+                'email' => 'vitima@empresa.com.br',
+                'senha' => 'Senha@123',
+                'senha_confirmation' => 'Senha@123',
+            ])
+            ->assertStatus(419);
+
+        $this->assertDatabaseMissing('USUARIO', ['email' => 'vitima@empresa.com.br']);
+    }
+
     /** RN01 – conta inativada perde o acesso na próxima requisição */
     public function test_usuario_inativado_e_desconectado(): void
     {

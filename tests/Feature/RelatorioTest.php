@@ -55,6 +55,17 @@ class RelatorioTest extends TestCase
         $this->assertStringContainsString('Joana Mendonça', $conteudo);
     }
 
+    public function test_relatorio_calcula_dias_de_atraso_dos_livros_em_posse(): void
+    {
+        $this->travel(17)->days();
+
+        $conteudo = $this->actingAs($this->admin)
+            ->get(route('admin.relatorios.exportar', ['formato' => 'csv', 'inicio' => now()->subDays(30)->toDateString()]))
+            ->streamedContent();
+
+        $this->assertStringContainsString(';3;0,00;Atrasado', $conteudo);
+    }
+
     public function test_exportacao_pdf(): void
     {
         $resposta = $this->actingAs($this->admin)->get(route('admin.relatorios.exportar', ['formato' => 'pdf']));

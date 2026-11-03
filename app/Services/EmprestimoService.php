@@ -77,9 +77,9 @@ class EmprestimoService
             $emPosse = $this->livrosEmPosse($colaborador);
             if ($emPosse + count($idsLivros) > $max) {
                 $restante = max(0, $max - $emPosse);
-                throw new RegraNegocioException(
-                    "Limite de {$max} livros em posse: o colaborador já possui {$emPosse} e pode retirar no máximo mais {$restante}."
-                );
+                throw new RegraNegocioException($restante === 0
+                    ? "Limite de {$max} livros em posse: o colaborador já possui {$emPosse} e precisa devolver um livro antes de um novo empréstimo."
+                    : "Limite de {$max} livros em posse: o colaborador já possui {$emPosse} e pode retirar no máximo mais {$restante}.");
             }
 
             /** @var Collection<int, Livro> $livros */

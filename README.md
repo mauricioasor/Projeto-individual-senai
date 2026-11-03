@@ -80,6 +80,8 @@ php artisan test
 | CT10, CT11, CT13 | `SegurancaTest` |
 | CT12 | `RelatorioTest` |
 
+As evidências da execução (saída dos testes e capturas de tela de cada caso) estão em [`docs/evidencias/`](docs/evidencias/README.md).
+
 ## Requisitos funcionais e onde estão no código
 
 | Requisito | Rota / tela | Código principal |
