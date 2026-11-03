@@ -54,7 +54,7 @@
             @csrf @method('PATCH')
             <button type="submit" class="btn-sm-action outline" title="{{ $u->isAtivo() ? 'Inativar' : 'Reativar' }}"><i class="bi {{ $u->isAtivo() ? 'bi-person-dash' : 'bi-person-check' }}"></i></button>
           </form>
-          @if ($u->emprestimos_count === 0)
+          @if ((int) $u->emprestimos_count === 0)
             <form method="POST" action="{{ route('admin.usuarios.destroy', $u) }}" class="form-inline" data-confirmar="Excluir o usuário {{ $u->nome }}?">
               @csrf @method('DELETE')
               <button type="submit" class="btn-sm-action outline" title="Excluir"><i class="bi bi-trash"></i></button>
