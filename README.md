@@ -4,7 +4,7 @@ Sistema web de gestão da biblioteca interna de uma empresa, desenvolvido como *
 
 O sistema substitui a planilha compartilhada e o caderno de anotações por um controle centralizado do acervo e dos empréstimos: disponibilidade em tempo real, prazos, renovações, devoluções, contribuições por atraso (destinadas a ações sociais), notificações por e-mail e relatórios.
 
-A documentação completa está em [`docs/Relatorio_MR_Biblioteca_v1.2.docx`](docs/Relatorio_MR_Biblioteca_v1.2.docx).
+A documentação completa está em [`docs/Relatorio_MR_Biblioteca_v1.3.docx`](docs/Relatorio_MR_Biblioteca_v1.3.docx).
 
 ## Tecnologias
 
