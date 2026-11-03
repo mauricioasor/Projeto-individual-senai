@@ -31,6 +31,8 @@ Na primeira execução o contêiner instala as dependências, gera a chave da ap
 - Caixa de e-mails de teste (Mailpit): http://localhost:8025, onde chegam os e-mails de recuperação de senha e de atraso.
 - MySQL: `localhost:3307` (usuário `biblioteca`, senha `biblioteca`)
 
+Se a porta 8000 estiver ocupada no seu computador (o navegador mostra "conexão redefinida"), defina outra no `.env`, por exemplo `APP_PORT=8080` e `APP_URL=http://localhost:8080`, e rode `docker compose up -d` de novo. No Windows, se `localhost` não abrir, use `http://127.0.0.1:<porta>`.
+
 ### Sem Docker
 
 Requer PHP 8.3+ e Composer. Para um teste rápido com SQLite:
