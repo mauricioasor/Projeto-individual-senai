@@ -90,7 +90,7 @@ class EmprestimoTest extends TestCase
             ->assertSessionHasErrors('livros.0');
     }
 
-    /** CT07 – RN17 */
+    /** CT07a – RN17: empréstimo em atraso */
     public function test_colaborador_com_atraso_nao_faz_novo_emprestimo(): void
     {
         $colab = Usuario::factory()->create();
@@ -102,6 +102,26 @@ class EmprestimoTest extends TestCase
 
         $this->actingAs($colab)->post(route('emprestimos.store'), ['livros' => [$b->id_livro]])
             ->assertSessionHasErrors('regra');
+
+        $this->assertSame(1, Emprestimo::count());
+    }
+
+    /** CT07b – RN17: contribuição pendente, sem nenhum livro em atraso */
+    public function test_colaborador_com_contribuicao_pendente_nao_faz_novo_emprestimo(): void
+    {
+        $colab = Usuario::factory()->create();
+        [$a, $b] = Livro::factory()->count(2)->create()->all();
+
+        $this->travel(-20)->days();
+        $emprestimo = app(EmprestimoService::class)->registrar($colab, [$a->id_livro]);
+        $this->travelBack();
+        app(EmprestimoService::class)->devolver($emprestimo->fresh(), [$emprestimo->itens()->first()->id_item]);
+
+        $this->assertTrue($emprestimo->fresh()->temContribuicaoPendente());
+        $this->assertFalse($emprestimo->fresh()->estaAtrasado());
+
+        $this->actingAs($colab)->post(route('emprestimos.store'), ['livros' => [$b->id_livro]])
+            ->assertSessionHasErrors(['regra' => 'Empréstimo não permitido: o colaborador possui contribuição por atraso pendente de pagamento.']);
 
         $this->assertSame(1, Emprestimo::count());
     }

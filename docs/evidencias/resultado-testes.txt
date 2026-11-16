@@ -25,6 +25,7 @@ Emprestimo (Tests\Feature\Emprestimo)
  [x] Limite de tres livros em posse
  [x] Mesmo livro nao pode se repetir no emprestimo
  [x] Colaborador com atraso nao faz novo emprestimo
+ [x] Colaborador com contribuicao pendente nao faz novo emprestimo
  [x] Renovacao unica por mais 14 dias
  [x] Colaborador nao renova emprestimo de outra pessoa
 
