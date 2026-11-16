@@ -5,7 +5,7 @@ Evidências da execução dos casos de teste do Quadro 12 do relatório (CT01 a 
 ## Testes automatizados
 
 - `resultado-testes.txt`: saída do PHPUnit (`php artisan test --testdox-text`), com 46 testes e 170 verificações aprovados.
-- `testes-automatizados-46-aprovados.png`: execução no terminal (`docker compose exec app php artisan test`).
+- `testes-automatizados-46-aprovados.png`: execução no terminal (`php artisan test`).
 
 Para repetir: `docker compose exec app php artisan test`.
 
