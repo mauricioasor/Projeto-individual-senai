@@ -4,7 +4,16 @@ Sistema web de gestão da biblioteca interna de uma empresa, desenvolvido como *
 
 O sistema substitui a planilha compartilhada e o caderno de anotações por um controle centralizado do acervo e dos empréstimos: disponibilidade em tempo real, prazos, renovações, devoluções, contribuições por atraso (destinadas a ações sociais), notificações por e-mail e relatórios.
 
-A documentação completa está em [`docs/Relatorio_MR_Biblioteca_v1.5.docx`](docs/Relatorio_MR_Biblioteca_v1.5.docx).
+## Documentação e apresentação
+
+| Material | Arquivo |
+|---|---|
+| Relatório técnico (versão final 1.5) | [`docs/Relatorio_MR_Biblioteca_v1.5.pdf`](docs/Relatorio_MR_Biblioteca_v1.5.pdf) e [`.docx`](docs/Relatorio_MR_Biblioteca_v1.5.docx) |
+| Apresentação da banca (8 slides + reserva) | [`docs/apresentacao/Apresentacao_Banca_MR_Biblioteca.pptx`](docs/apresentacao/Apresentacao_Banca_MR_Biblioteca.pptx) |
+| Vídeo de demonstração (~1 min, acelerado) | [`docs/apresentacao/MR_Biblioteca_demonstracao_2x.mp4`](docs/apresentacao/MR_Biblioteca_demonstracao_2x.mp4) |
+| Vídeo de demonstração completo (~2 min) | [`docs/apresentacao/MR_Biblioteca_demonstracao.mp4`](docs/apresentacao/MR_Biblioteca_demonstracao.mp4) |
+| Evidências dos testes (CT01 a CT13) | [`docs/evidencias/`](docs/evidencias/README.md) |
+| Telas do sistema (Anexo do relatório) | [`docs/telas/`](docs/telas/) |
 
 ## Tecnologias
 
@@ -132,7 +141,7 @@ database/migrations/         Tabelas conforme o DER e o dicionário de dados
 database/seeders/            Dados de exemplo
 resources/views/             Telas Blade (layout por perfil)
 public/assets/               CSS e JS do protótipo, reaproveitados
-docs/                        Relatório, diagramas e script SQL
+docs/                        Relatório, apresentação, vídeo, evidências, diagramas e script SQL
 prototipo/                   Protótipo navegável em HTML (dados simulados)
 tests/                       Testes automatizados (CT01 a CT13)
 ```
